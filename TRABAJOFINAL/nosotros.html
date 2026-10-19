@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nosotros, tiendas y ayuda</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/nosotros.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/LOGO.png" alt="BiciLima" width="200" height="62"></a>
+        </div>
+        <nav class="subheader">
+            <div class="menu">
+                <ul>
+                    <li><a href="bicicletas.html">Bicicletas</a>
+                        <ul>
+                            <li><a href="bicicletas.html#montana">Bicicletas de montaña</a></li>
+                            <li><a href="bicicletas.html#ruta">Bicicletas de ruta</a></li>
+                            <li><a href="bicicletas.html#urbanas">Urbanas y eléctricas</a></li>
+                            <li><a href="bicicletas.html#infantiles">Bicicletas infantiles</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="accesorios.html">Accesorios</a>
+                        <ul>
+                            <li><a href="accesorios.html#proteccion">Protección</a></li>
+                            <li><a href="accesorios.html#componentes">Componentes y repuestos</a></li>
+                            <li><a href="accesorios.html#indumentaria">Indumentaria</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="servicio.html">Servicio técnico</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <input type="text" placeholder="Buscar...">
+            <button onclick="location.href='cuenta.html'">Mi cuenta</button>
+            <button onclick="location.href='carrito.html'">Carrito</button>
+        </nav>
+    </header>
+
+    <main class="nosotros-main">
+        <h1>Nosotros, tiendas y ayuda</h1>
+
+        <section class="tiendas">
+            <div class="tiendas-mapa">
+                <iframe title="Mapa de sucursales de BiciLima" src="https://www.google.com/maps?q=Specialized+Per%C3%BA+Miraflores%2C+Av.+Reducto%2C+Lima&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="sucursales">
+                <div class="sucursal">
+                    <h3>Sucursal Centro</h3>
+                    <p>Dirección, distrito</p>
+                    <p>Lun–Sáb 9:00–19:00</p>
+                </div>
+                <div class="sucursal">
+                    <h3>Sucursal Norte</h3>
+                    <p>Dirección, distrito</p>
+                    <p>Lun–Sáb 9:00–19:00</p>
+                </div>
+                <div class="sucursal">
+                    <h3>Sucursal Sur</h3>
+                    <p>Dirección, distrito</p>
+                    <p>Lun–Sáb 9:00–19:00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="empresa">
+            <div class="empresa-bloque">
+                <h3>Nuestra historia</h3>
+                <p>BiciLima nació de la pasión por pedalear Lima: de la Costa Verde a los cerros. Empezamos como un pequeño taller y hoy te acompañamos desde la compra hasta el mantenimiento de tu bicicleta.</p>
+            </div>
+            <div class="empresa-bloque">
+                <h3>Misión y visión</h3>
+                <p>Queremos que más personas se muevan en bicicleta con seguridad y confianza. Nuestra visión es ser la tienda de referencia para el ciclismo en el Perú.</p>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Preguntas frecuentes</h2>
+            <details>
+                <summary>¿Cómo reservo una cita en el taller?</summary>
+                <p>Entra a Servicio técnico, elige el servicio, la fecha y la hora, y confirma. Te escribiremos por WhatsApp.</p>
+            </details>
+            <details>
+                <summary>¿Qué cubre la garantía de mi bicicleta?</summary>
+                <p>Cubre defectos de fabricación del cuadro y los componentes. No cubre el desgaste normal ni golpes.</p>
+            </details>
+            <details>
+                <summary>¿Cuánto demora el envío?</summary>
+                <p>En Lima, de 2 a 4 días hábiles. En provincias, de 4 a 8 días hábiles. Envío gratis desde S/ 1,500.</p>
+            </details>
+            <details>
+                <summary>¿Cómo registro un reclamo?</summary>
+                <p>Escríbenos con el formulario de contacto o por WhatsApp, indicando tu número de pedido.</p>
+            </details>
+        </section>
+
+        <section class="contacto">
+            <h2>Contáctanos</h2>
+            <form>
+                <div class="contacto-campos">
+                    <div class="contacto-campo">
+                        <label for="cn">Nombre</label>
+                        <input id="cn" type="text" required>
+                    </div>
+                    <div class="contacto-campo">
+                        <label for="ce">Correo electrónico</label>
+                        <input id="ce" type="email" required>
+                    </div>
+                    <div class="contacto-campo">
+                        <label for="ct">Teléfono</label>
+                        <input id="ct" type="tel">
+                    </div>
+                    <div class="contacto-mensaje">
+                        <label for="cm">Mensaje</label>
+                        <textarea id="cm" rows="4" required></textarea>
+                    </div>
+                </div>
+                <div class="contacto-acciones">
+                    <button type="submit">Enviar mensaje</button>
+                    <a href="#">Escribir por WhatsApp</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-enlaces">
+            <a href="bicicletas.html">Bicicletas</a> ·
+            <a href="accesorios.html">Accesorios</a> ·
+            <a href="servicio.html">Servicio técnico</a> ·
+            <a href="nosotros.html">Nosotros</a> ·
+            <a href="nosotros.html">Tiendas</a> ·
+            <a href="#">Ayuda</a> ·
+            <a href="nosotros.html">Contacto</a>
+        </nav>
+        <small>© 2026 BiciLima · Tienda de Bicicletas y Accesorios · Lima, Perú</small>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

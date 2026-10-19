@@ -1,0 +1,77 @@
+.pagina {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 32px;
+}
+
+.pagina h1 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.intro {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 24px;
+}
+
+.seccion {
+    margin-bottom: 36px;
+}
+
+.seccion h2 {
+    font-size: 16px;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #aaa;
+}
+
+.precio {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.menu a {
+    display: block;
+}
+
+/* Mi cuenta */
+.cuenta {
+    max-width: 380px;
+    margin: 30px auto;
+    padding: 24px;
+    background: #fff;
+    border: 2px solid #aaa;
+}
+
+.cuenta label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.cuenta input {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #aaa;
+    font-size: 13px;
+}
+
+.cuenta button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#mensaje {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #1b6e2e;
+}
+
+@media (max-width: 500px) {
+    .caja {
+        grid-template-columns: 1fr;
+    }
+}

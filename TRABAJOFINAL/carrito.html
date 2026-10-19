@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Carrito de Compras - Specialized</title>
+     <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/carrito.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/LOGO.png" alt="BiciLima" width="200" height="62"></a>
+        </div>
+        <nav class="subheader">
+            <div class="menu">
+                <ul>
+                    <li><a href="bicicletas.html">Bicicletas</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="servicio.html">Servicio técnico</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <button onclick="location.href='index.html'" class="btn-volver-tienda">Volver a la Tienda</button>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Tu Carrito de Compras</h2>
+        <div id="vista-carrito" class="carrito-wrapper">
+            <div class="carrito-productos">
+                <div class="item-carrito" id="producto-destacado-row">
+                    <div class="item-detalles">
+                        <img src="imagenes/destacado.jpg" alt="Bicicleta Specialized">
+                        <div class="item-info">
+                            <h3 id="item-nombre">Bicicleta Specialized Epic</h3>
+                            <p>S/ <span id="item-precio-unidad">10,000</span></p>
+                        </div>
+                    </div>
+                    <div class="item-acciones">
+                        <div class="selector-cantidad">
+                            <button onclick="cambiarCantidad(-1)">-</button>
+                            <span id="item-cantidad">1</span>
+                            <button onclick="cambiarCantidad(1)">+</button>
+                        </div>
+                        <button class="btn-eliminar" onclick="eliminarProducto()">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carrito-resumen">
+                <h3>Resumen de la orden</h3>
+                <hr class="divisor-resumen">
+                
+                <div class="resumen-linea">
+                    <span>Subtotal</span>
+                    <span>S/ <span id="resumen-subtotal">10,000.00</span></span>
+                </div>
+                <div class="resumen-linea">
+                    <span>IGV (18%)</span>
+                    <span>S/ <span id="resumen-igv">1,800.00</span></span>
+                </div>
+                <div class="resumen-linea">
+                    <span>Envío (Lima Metropolitana)</span>
+                    <span>S/ <span id="resumen-envio">45.00</span></span>
+                </div>          
+                <div class="resumen-linea total">
+                    <span>Total General</span>
+                    <span>S/ <span id="resumen-total">11,845.00</span></span>
+                </div>
+                <button class="btn-pagar" onclick="procesarPago()">Procesar Pago</button>
+
+                <div class="metodos-pago">
+                    <p>Aceptamos múltiples métodos de pago locales</p>
+                    <div class="billeteras-tags">
+                        <span class="tag-pago">Visa / Master</span>
+                        <span class="tag-pago">Yape</span>
+                        <span class="tag-pago">Plin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="vista-vacio" class="carrito-vacio">
+            <h3>Tu carrito está actualmente vacío.</h3>
+            <p>Parece que aún no has añadido ninguna bicicleta o accesorio a tu orden.</p>
+            <a href="index.html" class="btn-volver-home">Explorar Productos</a>
+        </div>
+    </main>
+    <footer>
+        <small>© 2026 Specialized · Tienda de Bicicletas y Accesorios · Lima, Perú</small>
+    </footer>
+    <script>
+        const PRECIO_BASE = 10000;
+        const COSTO_ENVIO = 45;
+        let cantidad = 1;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const montoGuardado = parseFloat(localStorage.getItem('montoCarrito')) || 0;
+
+            if (montoGuardado > 0) {
+                cantidad = Math.floor(montoGuardado / PRECIO_BASE);
+                if (cantidad < 1) cantidad = 1;                
+                document.getElementById('vista-carrito').style.display = 'grid';
+                document.getElementById('vista-vacio').style.display = 'none';
+                calcularPrecios();
+            } else {
+                document.getElementById('vista-carrito').style.display = 'none';
+                document.getElementById('vista-vacio').style.display = 'block';
+            }
+        });
+
+        function calcularPrecios() {
+            const subtotal = PRECIO_BASE * cantidad;
+            const igv = subtotal * 0.18;
+            const totalGeneral = subtotal + igv + COSTO_ENVIO;
+
+            document.getElementById('item-cantidad').innerText = cantidad;
+            localStorage.setItem('montoCarrito', subtotal);
+
+            document.getElementById('resumen-subtotal').innerText = subtotal.toLocaleString('es-PE', { minimumFractionDigits: 2 });
+            document.getElementById('resumen-igv').innerText = igv.toLocaleString('es-PE', { minimumFractionDigits: 2 });
+            document.getElementById('resumen-total').innerText = totalGeneral.toLocaleString('es-PE', { minimumFractionDigits: 2 });
+        }
+
+        function cambiarCantidad(valor) {
+            if (cantidad + valor >= 1) {
+                cantidad += valor;
+                calcularPrecios();
+            }
+        }
+
+        function eliminarProducto() {
+            if(confirm("¿Estás seguro de que deseas quitar este artículo de tu carrito?")) {
+                localStorage.removeItem('montoCarrito');
+                document.getElementById('vista-carrito').style.display = 'none';
+                document.getElementById('vista-vacio').style.display = 'block';
+            }
+        }
+
+        function procesarPago() {
+            const subtotal = PRECIO_BASE * cantidad;
+            const totalFinal = subtotal + (subtotal * 0.18) + COSTO_ENVIO;
+            
+            alert(`Conexión Segura Pasarela Pago:\n\nProcesando transacción por el monto de S/ ${totalFinal.toLocaleString('es-PE', { minimumFractionDigits: 2 })}\n\nSerás redirigido para validar tu método seleccionado.`);
+            localStorage.removeItem('montoCarrito');
+            location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

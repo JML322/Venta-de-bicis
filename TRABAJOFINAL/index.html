@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de bicicletas</title>
+    <link rel="stylesheet" href="/estilos/styles.css">
+</head>
+<body>
+
+    <div id="pantalla-presentacion" class="pantalla-bienvenida">
+        <div class="contenido-presentacion">
+            <img src="imagenes/LOGO.png" alt="BiciLima Logo" class="logo-presentacion">
+            <h1>BIENVENIDO SPECIALIZED</h1>
+            <p>Tu próxima gran aventura sobre dos ruedas comienza aquí. Descubre el mejor rendimiento y calidad en un solo lugar.</p>
+            <button onclick="entrarAlSitio()" class="btn-entrar">Explorar Tienda</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/LOGO.png" alt="BiciLima" width="200" height="62"></a>
+        </div>
+        <nav class="subheader">
+            <div class="menu">
+                <ul>
+                    <li><a href="bicicletas.html">Bicicletas</a>
+                        <ul>
+                            <li><a href="bicicletas.html#montana">Bicicletas de montaña</a></li>
+                            <li><a href="bicicletas.html#ruta">Bicicletas de ruta</a></li>
+                            <li><a href="bicicletas.html#urbanas">Urbanas y eléctricas</a></li>
+                            <li><a href="bicicletas.html#infantiles">Bicicletas infantiles</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="accesorios.html">Accesorios</a>
+                        <ul>
+                            <li><a href="accesorios.html#proteccion">Protección</a></li>
+                            <li><a href="accesorios.html#componentes">Componentes y repuestos</a></li>
+                            <li><a href="accesorios.html#indumentaria">Indumentaria</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="servicio.html">Servicio técnico</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <input type="text" placeholder="Buscar...">
+            <button onclick="location.href='cuenta.html'">Mi cuenta</button>
+            <button onclick="location.href='carrito.html'">Carrito</button>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="container-tarjetas">
+                <h2>Categorías de bicicletas</h2>
+                <div class="caja">
+                    <div class="tarjeta">
+                        <div class="desc">
+                            <img src="imagenes/bicimont.jpg" alt="Bicicleta de montaña">
+                            <div class="titulo">Montaña</div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="desc">
+                            <img src="imagenes/biciruta.jpg" alt="Bicicleta de ruta">
+                            <div class="titulo">Ruta</div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="desc">
+                            <img src="imagenes/bicielectrica.jpg" alt="Bicicleta urbana y eléctrica">
+                            <div class="titulo">Urbanas y eléctricas</div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="desc">
+                            <img src="imagenes/bicinino.webp" alt="Bicicleta infantil">
+                            <div class="titulo">Infantiles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caja2">
+                <div class="destacados">
+                    <h2>Productos destacados</h2>
+                    <div class="destacado-desc">
+                        <img src="imagenes/destacado.jpg" alt="Producto destacado">
+                        <div class="producto-destacado">
+                            <p>Bicicleta Specialized Epic</p>
+                            <p>S/ 10,000</p>
+                        </div>
+                    </div>
+                    <button onclick="agregarAlCarritoUnico()">Agregar al carrito</button>
+                </div>
+                <div class="video-rutas">
+                    <iframe width="360" height="185" src="https://www.youtube.com/embed/KfHe2ob_vvI?si=ARTiR3VnyMlPaV6-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Video de rutas en bicicletas</p>
+                </div>
+            </div>
+
+            <div class="servicio-tecnico">
+                <p>Servicio técnico: mantenimiento y reparación para tu bicicleta</p>
+                <a href="servicio.html">Reservar cita</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="footer-enlaces">
+            <a href="bicicletas.html">Bicicletas</a> ·
+            <a href="accesorios.html">Accesorios</a> ·
+            <a href="servicio.html">Servicio técnico</a> ·
+            <a href="nosotros.html">Nosotros</a> ·
+            <a href="nosotros.html">Tiendas</a> ·
+            <a href="#">Ayuda</a> ·
+            <a href="nosotros.html">Contacto</a>
+        </nav>
+        <small>© 2026 Specialized · Tienda de Bicicletas y Accesorios · Lima, Perú</small>
+    </footer>
+    <script>
+        function entrarAlSitio() {
+            const presentacion = document.getElementById('pantalla-presentacion');
+            presentacion.classList.add('ocultar');
+        }
+
+        function agregarAlCarritoUnico() {
+            localStorage.setItem('montoCarrito', 10000);
+
+            alert("¡Bicicleta Specialized Epic agregada al carrito!");
+
+            location.href = 'carrito.html';
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

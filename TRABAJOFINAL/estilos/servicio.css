@@ -1,0 +1,137 @@
+.servicio-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 32px;
+}
+
+.servicio-intro h1 {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.servicio-intro p {
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+.servicio-contenido {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.servicio-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.servicio-item {
+    min-height: 88px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #aaa;
+}
+
+.servicio-item h3, .garantia h3 {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.servicio-item p, .garantia p {
+    font-size: 13px;
+}
+
+.garantia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 140px;
+    padding: 10px 14px 14px;
+    background: #e5e5e5;
+    border: 1px solid #aaa;
+}
+
+.garantia button {
+    width: 100%;
+}
+
+.reserva {
+    padding: 18px 20px 22px;
+    background: #fff;
+    border: 1px solid #aaa;
+}
+
+.reserva h2 {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.campo-completo, .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reserva label {
+    font-size: 12px;
+    color: #555;
+}
+
+.reserva input, .reserva select, .reserva textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    font-size: 13px;
+    font-family: inherit;
+    background: #fff;
+}
+
+.reserva textarea {
+    resize: vertical;
+}
+
+.form-pie {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.form-pie button {
+    min-width: 215px;
+    padding: 14px 16px;
+}
+
+.form-pie p {
+    font-size: 12px;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .servicio-contenido {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .campos {
+        grid-template-columns: 1fr;
+    }
+    .form-pie {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

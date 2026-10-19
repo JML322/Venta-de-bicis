@@ -1,0 +1,121 @@
+.cuenta-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+.cuenta-main h1 {
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.cuenta-main h2 {
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.cuenta-formularios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 320px));
+    justify-content: center;
+    gap: 35px;
+}
+
+.cuenta-tarjeta {
+    padding: 16px 18px 24px;
+    background: #fff;
+    border: 1px solid #aaa;
+}
+
+.cuenta-tarjeta form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cuenta-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cuenta-main label {
+    font-size: 12px;
+    color: #555;
+}
+
+.cuenta-campo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    font-size: 13px;
+    font-family: inherit;
+    background: #fff;
+}
+
+.cuenta-opciones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+    color: #444;
+}
+
+.cuenta-opciones a:hover {
+    text-decoration: underline;
+}
+
+.cuenta-tarjeta button {
+    width: 100%;
+    padding: 13px 16px;
+    margin-top: 6px;
+}
+
+.btn-registro {
+    background: #fff;
+    color: #222;
+    border: 1px solid #222;
+}
+
+.btn-registro:hover {
+    background: #eee;
+}
+
+.pedidos {
+    margin-top: 40px;
+}
+
+.pedidos-scroll {
+    overflow-x: auto;
+    border: 1px solid #aaa;
+}
+
+.pedidos table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.pedidos th {
+    padding: 12px;
+    text-align: left;
+    background: #e5e5e5;
+}
+
+.pedidos td {
+    padding: 16px 12px;
+    background: #fff;
+    border-top: 1px solid #aaa;
+}
+
+.pedidos td a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+    .cuenta-formularios {
+        grid-template-columns: minmax(0, 420px);
+    }
+}

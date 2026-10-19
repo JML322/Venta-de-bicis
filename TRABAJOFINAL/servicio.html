@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servicio técnico</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/servicio.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/LOGO.png" alt="BiciLima" width="200" height="62"></a>
+        </div>
+        <nav class="subheader">
+            <div class="menu">
+                <ul>
+                    <li><a href="bicicletas.html">Bicicletas</a>
+                        <ul>
+                            <li><a href="bicicletas.html#montana">Bicicletas de montaña</a></li>
+                            <li><a href="bicicletas.html#ruta">Bicicletas de ruta</a></li>
+                            <li><a href="bicicletas.html#urbanas">Urbanas y eléctricas</a></li>
+                            <li><a href="bicicletas.html#infantiles">Bicicletas infantiles</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="accesorios.html">Accesorios</a>
+                        <ul>
+                            <li><a href="accesorios.html#proteccion">Protección</a></li>
+                            <li><a href="accesorios.html#componentes">Componentes y repuestos</a></li>
+                            <li><a href="accesorios.html#indumentaria">Indumentaria</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="servicio.html">Servicio técnico</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <input type="text" placeholder="Buscar...">
+            <button onclick="location.href='cuenta.html'">Mi cuenta</button>
+            <button onclick="location.href='carrito.html'">Carrito</button>
+        </nav>
+    </header>
+
+    <main class="servicio-main">
+        <section class="servicio-intro">
+            <h1>Servicio técnico</h1>
+            <p>Mantenimiento y reparación de bicicletas con garantía. Reserva tu cita en línea.</p>
+        </section>
+
+        <section class="servicio-contenido">
+            <div class="servicio-lista">
+                <div class="servicio-item">
+                    <h3>Mantenimiento preventivo</h3>
+                    <p>Ajuste, limpieza y lubricación.</p>
+                </div>
+                <div class="servicio-item">
+                    <h3>Reparación general</h3>
+                    <p>Frenos, transmisión, ruedas y suspensión.</p>
+                </div>
+                <div class="servicio-item">
+                    <h3>Armado de bicicleta nueva</h3>
+                    <p>Ensamblaje y puesta a punto.</p>
+                </div>
+                <div class="garantia">
+                    <div class="garantia-texto">
+                        <h3>Garantía</h3>
+                        <p>Políticas y cobertura.</p>
+                        <p>¿Tuviste un problema con tu producto?</p>
+                    </div>
+                    <button>Registrar reclamo</button>
+                </div>
+            </div>
+
+            <div class="reserva">
+                <h2>Reservar cita</h2>
+                <form>
+                    <div class="campos">
+                        <div class="campo-completo">
+                            <label for="tipo">Tipo de servicio</label>
+                            <select id="tipo" required>
+                                <option value="">Elige uno</option>
+                                <option>Mantenimiento preventivo</option>
+                                <option>Reparación general</option>
+                                <option>Armado de bicicleta nueva</option>
+                            </select>
+                        </div>
+                        <div class="campo-completo">
+                            <label for="sucursal">Sucursal</label>
+                            <select id="sucursal">
+                                <option>Miraflores</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="fecha">Fecha</label>
+                            <input id="fecha" type="date" required>
+                        </div>
+                        <div class="campo">
+                            <label for="hora">Hora</label>
+                            <select id="hora">
+                                <option>9:00</option>
+                                <option>11:00</option>
+                                <option>13:00</option>
+                                <option>15:00</option>
+                                <option>17:00</option>
+                            </select>
+                        </div>
+                        <div class="campo-completo">
+                            <label for="modelo">Marca y modelo de la bicicleta</label>
+                            <input id="modelo" type="text">
+                        </div>
+                        <div class="campo">
+                            <label for="nombre">Nombre completo</label>
+                            <input id="nombre" type="text" required>
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input id="telefono" type="tel" required>
+                        </div>
+                        <div class="campo-completo">
+                            <label for="comentarios">Comentarios o descripción del problema</label>
+                            <textarea id="comentarios" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-pie">
+                        <button type="submit">Confirmar cita</button>
+                        <p>Recibirás la confirmación por WhatsApp / correo.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-enlaces">
+            <a href="bicicletas.html">Bicicletas</a> ·
+            <a href="accesorios.html">Accesorios</a> ·
+            <a href="servicio.html">Servicio técnico</a> ·
+            <a href="nosotros.html">Nosotros</a> ·
+            <a href="nosotros.html">Tiendas</a> ·
+            <a href="#">Ayuda</a> ·
+            <a href="nosotros.html">Contacto</a>
+        </nav>
+        <small>© 2026 BiciLima · Tienda de Bicicletas y Accesorios · Lima, Perú</small>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

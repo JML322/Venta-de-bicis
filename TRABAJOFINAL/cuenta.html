@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi cuenta · BiciLima</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/cuenta.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/LOGO.png" alt="BiciLima" width="200" height="62"></a>
+        </div>
+        <nav class="subheader">
+            <div class="menu">
+                <ul>
+                    <li><a href="bicicletas.html">Bicicletas</a>
+                        <ul>
+                            <li><a href="bicicletas.html#montana">Bicicletas de montaña</a></li>
+                            <li><a href="bicicletas.html#ruta">Bicicletas de ruta</a></li>
+                            <li><a href="bicicletas.html#urbanas">Urbanas y eléctricas</a></li>
+                            <li><a href="bicicletas.html#infantiles">Bicicletas infantiles</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="accesorios.html">Accesorios</a>
+                        <ul>
+                            <li><a href="accesorios.html#proteccion">Protección</a></li>
+                            <li><a href="accesorios.html#componentes">Componentes y repuestos</a></li>
+                            <li><a href="accesorios.html#indumentaria">Indumentaria</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="servicio.html">Servicio técnico</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <input type="text" placeholder="Buscar...">
+            <button onclick="location.href='cuenta.html'">Mi cuenta</button>
+            <button onclick="location.href='carrito.html'">Carrito</button>
+        </nav>
+    </header>
+
+    <main class="cuenta-main">
+        <h1>Mi cuenta</h1>
+
+        <section class="cuenta-formularios">
+            <div class="cuenta-tarjeta">
+                <h2>Iniciar sesión</h2>
+                <form>
+                    <div class="cuenta-campo">
+                        <label for="login-email">Correo electrónico</label>
+                        <input id="login-email" type="email" required>
+                    </div>
+                    <div class="cuenta-campo">
+                        <label for="login-pass">Contraseña</label>
+                        <input id="login-pass" type="password" required>
+                    </div>
+                    <div class="cuenta-opciones">
+                        <input id="recordar" type="checkbox">
+                        <label for="recordar">Recordarme</label>
+                        <span>·</span>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+            </div>
+
+            <div class="cuenta-tarjeta">
+                <h2>Crear cuenta</h2>
+                <form>
+                    <div class="cuenta-campo">
+                        <label for="reg-nombre">Nombre completo</label>
+                        <input id="reg-nombre" type="text" required>
+                    </div>
+                    <div class="cuenta-campo">
+                        <label for="reg-email">Correo electrónico</label>
+                        <input id="reg-email" type="email" required>
+                    </div>
+                    <div class="cuenta-campo">
+                        <label for="reg-pass">Contraseña</label>
+                        <input id="reg-pass" type="password" required>
+                    </div>
+                    <button type="submit" class="btn-registro">Registrarse</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="pedidos">
+            <h2>Mis pedidos</h2>
+            <div class="pedidos-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N° pedido</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Total</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#0001</td>
+                            <td>00/00/0000</td>
+                            <td>En camino</td>
+                            <td>S/ 0,000</td>
+                            <td><a href="#">Ver detalle</a></td>
+                        </tr>
+                        <tr>
+                            <td>#0002</td>
+                            <td>00/00/0000</td>
+                            <td>Entregado</td>
+                            <td>S/ 000</td>
+                            <td><a href="#">Ver detalle</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-enlaces">
+            <a href="#">Bicicletas</a> ·
+            <a href="#">Accesorios</a> ·
+            <a href="servicio.html">Servicio técnico</a> ·
+            <a href="nosotros.html">Nosotros</a> ·
+            <a href="nosotros.html">Tiendas</a> ·
+            <a href="nosotros.html">Contacto</a>
+        </nav>
+        <small>© 2026 BiciLima · Tienda de Bicicletas y Accesorios · Lima, Perú</small>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
